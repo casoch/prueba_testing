@@ -7,13 +7,23 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<project.build.sourceEncodding>UTF-8</project.build.sourceEncodding>
-		<project.reporting.sourceEncodding>UTF-8</project.reporting.sourceEncodding>
-		<java.version>23</java.version>
-		<maven.compiler.source>23</maven.compiler.source>
-		<maven.compiler.target>23</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.sourceEncoding>UTF-8</project.reporting.sourceEncoding>
+		<java.version>21</java.version>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 	</properties>
 
+	<dependencies>
+		<!--
+		https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.12.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 	<build>
 		<plugins>
 			<!--
@@ -68,7 +78,8 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>es.gimbernat.prueba1_eclipse_maven.Principal</mainClass>
+									<mainClass>
+										es.gimbernat.prueba1_eclipse_maven.Principal</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
